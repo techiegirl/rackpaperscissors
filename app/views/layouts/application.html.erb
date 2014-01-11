@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" >Rock Paper Scissors!</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <%= link_to "New Game", root_path %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <%= render_breadcrumbs %>
+        <%= yield %>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="/">Start Over!</a></p>
+      </div>
+    </footer>
+
+  </body>
+
+
+</html>

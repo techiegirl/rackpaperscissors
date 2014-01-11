@@ -1,0 +1,34 @@
+ <header id="overview" class="jumbotron subhead">
+  <div class="container">
+    <!--<h1>Welcome Guest!</h1>-->
+    <img src="../assets/game.png" alt="" />
+    <br/>
+    <p class="lead">Please choose your sign from below for the game:</p>
+  </div>
+</header>
+<div class="container"></div>
+
+<pre class="prettyprint">
+  <div class="choices">
+    <%= select_tag :select_game, options_for_select(SIGNS) %>
+ </div>
+  <div id="result" style="display:none"></div>
+</pre>
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#select_game').on('change', function(){
+        var play = $('select#select_game :selected').val();
+        $.ajax({
+            type: "GET",
+            url: "/game/get_result/?value=" + play,
+            success: function(data){
+               $('#result').html(data);
+               $('#result').show();
+             }
+        });
+   });
+ })();
+
+</script>

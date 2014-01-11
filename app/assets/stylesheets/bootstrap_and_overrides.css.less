@@ -1,0 +1,81 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+.navbar .nav {
+    float: right;
+}
+.container{
+    margin-top: 20px;
+}
+
+.navbar-inner .container{
+    margin-top: 0px;
+}
+
+.jumbotron {
+    background: linear-gradient(45deg, #4682B4 0%, #4682B4 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset, 0 -3px 7px rgba(0, 0, 0, 0.2) inset;
+    color: #FFFFFF;
+    padding: 15px 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+
+#result {
+    background-color: #DFF0D8;
+    border: 1px solid #D6E9C6;
+    border-radius: 4px;
+    color: #468847;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 43px;
+    line-height: 43px;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 18px;
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+pre.prettyprint {
+    height: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    background-color: peachpuff;
+}
+.choices{
+    margin-left: 200px;
+    float: left;
+}
